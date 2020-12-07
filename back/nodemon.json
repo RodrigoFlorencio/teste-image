@@ -1,0 +1,12 @@
+{
+    "env": {
+        "MYSQL_USER": "thothcompany02",
+        "MYSQL_PASSWORD": "ImohtepHotep1971",
+        "MYSQL_DATABASE": "thothcompany02",
+        "MYSQL_HOST": "mysql.thothcompany.com.br",
+        "MYSQL_PORT": 3306,
+        
+        "JWT_KEY": "key_secret",
+        "URL_API": "http://localhost:3002"
+    }
+}

@@ -1,0 +1,58 @@
+<h2>
+    Excluir Produto
+</h2>
+
+<form>
+    <mat-form-field>
+        <input matInput placeholder="Nome" [value]="produto.nome"  name="nome" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Preço (R$)" [value]="produto.preco"  name="preco" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Categoria" [value]="produto.categoria"  name="categoria" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Tipo" [value]="produto.tipo"  name="tipo" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Desconto" [value]="produto.desconto"  name="desconto" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Promoção" [value]="produto.promo"  name="promo" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Quantidade" [value]="produto.quantidade"  name="quantidade" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="ID Fornecedor" [value]="produto.id_fornecedor"  name="id_fornecedor" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Imagem" [value]="produto.imagem"  name="imagem" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <textarea matInput [value]="produto.descricao" rows="7" name="descricao" disabled></textarea>
+    </mat-form-field><br><br>
+
+    <button class="btn" 
+    mat-raised-button 
+    color="warn"
+    (click)="deleteProduto()">
+        Excluir
+    </button>
+    
+    <button mat-raised-button  (click)="cancelar()">
+        Cancelar
+    </button>
+
+</form>
+

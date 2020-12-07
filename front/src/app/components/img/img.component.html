@@ -1,0 +1,25 @@
+
+<div class="btn">
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <input type="file" 
+        [(ngModel)]="addImg.imagem" 
+        name="imagem" 
+        id="customFile" 
+        (change)="onChange($event)">
+
+    </form>
+
+    <button class="btn"
+    mat-raised-button
+    color="primary"
+    (click)="addImgs()">                                                               
+    Salvar
+    </button>
+
+    <div class="img" *ngFor="let i of imagem">
+        <img [attr.src]="'http://localhost:3002' + i.imagem" alt="">
+    </div>
+
+</div>

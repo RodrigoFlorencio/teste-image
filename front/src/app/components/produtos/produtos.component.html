@@ -1,0 +1,43 @@
+<div class="content">
+  <h2>
+    Produtos
+  </h2>
+
+  <button routerLink="/adicionar-produto" class="btn-adicionar" mat-raised-button color="primary">
+      Adicionar Produto
+  </button>
+
+  <button routerLink="/img" class="btn-adicionar" mat-raised-button color="primary">
+      Imagem
+  </button>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Preço</th>
+        <th scope="col">Quantidade</th>
+        <th scope="col">Ações</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let p of produtos | paginate: { itemsPerPage: 10, currentPage: paginaAtual }; let i = index">
+        <td>{{ p.id }}</td>
+        <td>{{ p.nome }}</td>
+        <td>{{ p.preco | currency: 'BRL' }}</td>
+        <td>{{ p.quantidade }} <span>({{ p.tipo }})</span></td>
+        <td>
+
+          <button routerLink="/produtos/prod-edit/{{p.id}}" class="btn-editar"  mat-raised-button color="primary">Editar</button>
+
+          <button routerLink="/produtos/prod-delete/{{p.id}}" class="btn-excluir" mat-raised-button color="warn">Excluir</button>
+
+        </td>
+      </tr>
+    </tbody><br>
+
+    <pagination-controls (pageChange)="paginaAtual = $event" previousLabel="Anterior" nextLabel="Próximo"></pagination-controls>
+
+  </table>
+</div>

@@ -1,0 +1,38 @@
+<div>
+    
+    <div class="sidebar" *ngIf="usuario != null">
+
+        <header></header>
+
+        <ul>
+            <li><a routerLink="home">Home</a></li>
+            <li><a routerLink="produtos">Produtos</a></li>
+            <li><a routerLink="vendas">Vendas</a></li>
+            <li><a routerLink="fornecedor">Fornecedores</a></li>
+            <li><a routerLink="transporte">Transporte</a></li>
+            <li *ngIf="usuario != null"><a class="sair" (click)="logout()">Sair</a></li>
+        </ul>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <ng-container *ngIf="usuario != null">
+
+                <div class="login-user">
+                    <div class="user">
+                        Seja bem-vindo(a) <span>{{usuario.nome}}</span>
+                    </div>
+    
+                </div>
+
+            </ng-container>
+        </div>
+    </div>
+
+    <div class="content">
+        <router-outlet></router-outlet>
+    </div>
+
+</div>
+

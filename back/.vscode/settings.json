@@ -1,0 +1,17 @@
+{
+    "sqltools.connections": [
+        {
+            "database": "ecommerce",
+            "driver": "MySQL",
+            "mysqlOptions": {
+                "authProtocol": "default"
+            },
+            "name": "ecommerce-local",
+            "port": 3308,
+            "previewLimit": 50,
+            "server": "localhost",
+            "username": "root",
+            "password": ""
+        }
+    ]
+}

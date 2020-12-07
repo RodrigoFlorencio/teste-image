@@ -1,0 +1,59 @@
+<h2>
+    Adicionar Produto
+</h2>
+
+<form method="POST" enctype="multipart/form-data">
+    <mat-form-field>
+        <input matInput placeholder="Nome" [(ngModel)]="addProduto.nome" name="nome" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Preço (R$)" [(ngModel)]="addProduto.preco" name="preco" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Categoria" [(ngModel)]="addProduto.categoria" name="categoria" required>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Tipo" [(ngModel)]="addProduto.tipo" name="tipo" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Desconto" [(ngModel)]="addProduto.desconto" name="desconto">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Promoção" [(ngModel)]="addProduto.promo" name="promo">
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Quantidade" [(ngModel)]="addProduto.quantidade" name="quantidade" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="ID Fornecedor" [(ngModel)]="addProduto.id_fornecedor" name="id_fornecedor" required>
+    </mat-form-field>
+
+    <div class="custom-file">
+        <input type="file" class="custom-file-input file" id="customFile" (change)="onChange($event)" name="imagem" required>
+        <label class="custom-file-label" for="customFile" id="customFileLabel">Escolha uma imagem</label>
+    </div><br><br>
+
+    <mat-form-field>
+        <mat-label>Descrição</mat-label>
+        <textarea matInput rows="7" name="descricao" [(ngModel)]="addProduto.descricao" required></textarea>
+    </mat-form-field><br><br>
+
+    <button class="btn" 
+    mat-raised-button 
+    color="primary"
+    (click)="createProduto()">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+
+</form>

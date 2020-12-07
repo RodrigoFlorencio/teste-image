@@ -1,0 +1,65 @@
+
+
+<div class="content" *ngIf="chart">
+    <canvas id="canvas">{{ chart }}</canvas>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="content">
+    <chart [options]="options"></chart>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <div class="content">
+
+    <h2>
+        Vendas
+    </h2>
+
+    <table class="table">
+        <thead>
+            <tr>
+            <th scope="col">ID Pedido</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Valor Total</th>
+            <th scope="col">Data</th>
+            </tr>
+        </thead>
+        <tbody *ngFor="let p of pedidos">
+            <tr>
+                <td>{{ p.id_pedido }}</td>
+                <td>{{ p.nome }} {{ p.sobrenome }}</td>
+                <td>{{ p.valor_total | currency: 'BRL'}}</td>
+                <td>{{ p.data | date: 'dd/MM/yyyy' }}</td>
+            </tr>
+        </tbody>
+    </table>
+ 
+</div> -->
+    
+    <!-- <div class="teste" *ngFor="let p of pedidos">
+        {{ p.valor_total }}
+    </div> -->

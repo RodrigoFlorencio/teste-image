@@ -1,0 +1,89 @@
+<h2>
+    Adicionar Fornecedor
+</h2>
+
+<form>
+    <mat-form-field>
+        <input matInput placeholder="Nome" [(ngModel)]="create.nome" name="nome" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Fantasia" [(ngModel)]="create.fantasia" name="fantasia" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input mask="00.000.000 / 0000-00" matInput placeholder="CPF/CNPJ" [(ngModel)]="create.cpfCnpj" name="cpfCnpj" required>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Inscrição Estadual" [(ngModel)]="create.inscEst" name="inscEst" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="RG" [(ngModel)]="create.rg" name="rg" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input mask="00000-000" matInput placeholder="Cep" [(ngModel)]="create.cep" name="cep" required>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Logradouro" [(ngModel)]="create.logradouro" name="logradouro" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Número" [(ngModel)]="create.numero" name="numero" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Complemento" [(ngModel)]="create.complemento" name="complemento">
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Bairro" [(ngModel)]="create.bairro" name="bairro" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Cidade" [(ngModel)]="create.cidade" name="cidade" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="UF" [(ngModel)]="create.uf" name="uf" required>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Código Estado" [(ngModel)]="create.codEstado" name="codEstado" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Código Município" [(ngModel)]="create.codMunicipio" name="codMunicipio" required>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input mask="(00)0000-0000" matInput placeholder="Telefone 1" [(ngModel)]="create.fone1" name="fone1" required>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Telefone 2" [(ngModel)]="create.fone2" name="fone2">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Telefone 3" [(ngModel)]="create.fone3" name="fone3">
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="E-mail" [(ngModel)]="create.email" name="email" required>
+    </mat-form-field><br><br>
+
+    <button class="btn" 
+    mat-raised-button 
+    color="primary"
+    (click)="createFornecedor()">
+        Salvar
+    </button>
+    
+    <button mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+
+</form>

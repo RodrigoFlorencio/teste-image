@@ -1,0 +1,91 @@
+<h2>
+    Excluir Fornecedor
+</h2>
+
+<form>
+    <mat-form-field>
+        <input matInput placeholder="Nome" [value]="fornecedor.nome" name="nome" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Fantasia" [value]="fornecedor.fantasia" name="fantasia" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input mask="00.000.000 / 0000-00" matInput placeholder="CPF/CNPJ" [value]="fornecedor.cpfCnpj" name="cpfCnpj" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Inscrição Estadual" [value]="fornecedor.inscEst" name="inscEst" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="RG" [value]="fornecedor.rg" name="rg" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input mask="00000-000" matInput placeholder="CEP" [value]="fornecedor.cep" name="cep" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Logradouro" [value]="fornecedor.logradouro" name="logradouro" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Número" [value]="fornecedor.numero" name="numero" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Complemento" [value]="fornecedor.complemento" name="complemento" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Bairro" [value]="fornecedor.bairro" name="bairro" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Cidade" [value]="fornecedor.cidade" name="cidade" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="UF" [value]="fornecedor.uf" name="uf" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input matInput placeholder="Código Estado" [value]="fornecedor.codEstado" name="codEstado" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="Código Município" [value]="fornecedor.codMunicipio" name="codMunicipio" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input mask="(00)0000-0000" matInput placeholder="Telefone 1" [value]="fornecedor.fone1" name="fone1" disabled>
+    </mat-form-field><br><br>
+
+    <mat-form-field>
+        <input mask="(00)0000-0000" matInput placeholder="Telefone 2" [value]="fornecedor.fone2" name="fone2" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input mask="(00)0000-0000" matInput placeholder="Telefone 3" [value]="fornecedor.fone3" name="fone3" disabled>
+    </mat-form-field>
+
+    <mat-form-field>
+        <input matInput placeholder="E-mail" [value]="fornecedor.email" name="email" disabled>
+    </mat-form-field><br><br>
+
+    <button class="btn" 
+    mat-raised-button 
+    color="warn"
+    (click)="deleteFornecedor()">
+        Excluir
+    </button>
+    
+    <button mat-raised-button (click)="cancelar()">
+        Cancelar
+    </button>
+
+</form>
+
+

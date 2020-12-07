@@ -1,0 +1,62 @@
+<div class="content">
+    <h2>
+        Editar Produto
+    </h2>
+    
+    <form method="POST" enctype="multipart/form-data">
+        <mat-form-field>
+            <input matInput placeholder="Nome" [(ngModel)]="produto.nome"  name="nome" required>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Preço (R$)" [(ngModel)]="produto.preco"  name="preco" required>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Categoria" [(ngModel)]="produto.categoria"  name="categoria" required>
+        </mat-form-field><br><br>
+    
+        <mat-form-field>
+            <input matInput placeholder="Tipo" [(ngModel)]="produto.tipo"  name="tipo" required>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Desconto" [(ngModel)]="produto.desconto"  name="desconto">
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="Promoção" [(ngModel)]="produto.promo"  name="promo">
+        </mat-form-field><br><br>
+    
+        <mat-form-field>
+            <input matInput placeholder="Quantidade" [(ngModel)]="produto.quantidade"  name="quantidade" required>
+        </mat-form-field>
+    
+        <mat-form-field>
+            <input matInput placeholder="ID Fornecedor" [(ngModel)]="produto.id_fornecedor"  name="id_fornecedor" required>
+        </mat-form-field>
+
+        <div class="custom-file">
+            <input type="file" class="custom-file-input file" id="customFile"  (change)="onChange($event)" name="imagem" required>
+            <label class="custom-file-label" for="customFile" id="customFileLabel">Escolha uma imagem</label>
+        </div><br><br>
+    
+        <!-- <input type="file" placeholder="Imagem" [(ngModel)]="produto.imagem" name="imagem" required><br><br> -->
+    
+        <mat-form-field>
+            <textarea matInput [(ngModel)]="produto.descricao" rows="7" name="descricao" required></textarea>
+        </mat-form-field><br><br>
+    
+        <button class="btn" 
+        mat-raised-button 
+        color="primary"
+        (click)="editarProduto()">
+            Salvar
+        </button>
+        
+        <button mat-raised-button  (click)="cancelar()">
+            Cancelar
+        </button>
+    
+    </form>
+</div>
